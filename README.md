@@ -13,11 +13,14 @@ A basic invoice generator that creates invoices in PDF format. This tool is desi
    ```bash
    git clone https://github.com/praveenmethraskar/invoice-application.git
 2. Navigate into the project directory:
-   cd invoice-application
+    ```bash
+    cd invoice-application
 3. Install the dependencies
-   npm install
+    ```bash
+    npm install
 4. Start the application
-   npm start
+    ```bash
+    npm start
 
 #### Technologies Used
 Node.js
