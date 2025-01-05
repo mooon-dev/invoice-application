@@ -1,31 +1,30 @@
-Invoice Application
-Overview
-A basic invoice generator application that creates invoices in PDF format. This tool simplifies generating and managing invoices for small businesses or individuals.
+# Invoice Application
 
-Features
-Invoice Creation: Generate invoices with customer and item details.
-PDF Output: Invoices are saved as PDF files.
-User-friendly Interface: Easy-to-use form for inputting data.
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/praveenmethraskar/invoice-application.git
-Navigate into the project directory:
-bash
-Copy code
-cd invoice-application
-Install dependencies:
-bash
-Copy code
-npm install
-Usage
-Run the app with:
+## Overview
+A basic invoice generator that creates invoices in PDF format. This tool is designed for small businesses or individuals to generate, view, and store invoices easily.
 
-bash
-Copy code
-npm start
-Technologies Used
+## Features
+- **Invoice Creation**: Create invoices with customer and item details.
+- **PDF Generation**: Output invoices as PDF files.
+- **Simple Interface**: Easy-to-use form for entering data.
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/praveenmethraskar/invoice-application.git
+2. Navigate into the project directory:
+   cd invoice-application
+3. Install the dependencies
+   npm install
+4. Start the application
+   npm start
+
+#### Technologies Used
 Node.js
 Express
-PDF generation library (e.g., pdfkit)
+PDFKit (or any PDF generation library)
+
+# License
+This project is licensed under the MIT License.
+
+You can customize the `Technologies Used` and other sections as per the actual setup of your application.
