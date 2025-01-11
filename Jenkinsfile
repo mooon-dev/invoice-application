@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS = credentials('docker-hub')
+        DOCKER_CREDENTIALS = credentials('dockerHub')
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/praveenmethraskar/invoice-application.git'
+                git branch: 'main', url: 'https://github.com/mooon-dev/invoice-application.git'
             }
         }
 
@@ -25,9 +25,9 @@ pipeline {
             steps {
                 script {
                     // Build the backend image
-                    sh 'docker build -t praveenmethraskar/mern-invoice-app:latest -f mern-invoice-app/Dockerfile .'
+                    sh 'docker build -t moonlovesmoon/mern-invoice-app:latest -f mern-invoice-app/Dockerfile .'
                     // Build the frontend image
-                    sh 'docker build -t praveenmethraskar/client:latest -f client/Dockerfile .'
+                    sh 'docker build -t moonlovesmoon/client:latest -f client/Dockerfile .'
                 }
             }
         }
@@ -36,9 +36,9 @@ pipeline {
             steps {
                 script {
                     // Push images to Docker Hub
-                    withDockerRegistry(credentialsId: 'docker-hub') {
-                        sh 'docker push praveenmethraskar/mern-invoice-app:latest'
-                        sh 'docker push praveenmethraskar/client:latest'
+                    withDockerRegistry(credentialsId: 'dockerHub') {
+                        sh 'docker push moonlovesmoon/mern-invoice-app:latest'
+                        sh 'docker push moonlovesmoon/client:latest'
                     }
                 }
             }
